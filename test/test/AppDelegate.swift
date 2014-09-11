@@ -1,12 +1,3 @@
-//
-//  AppDelegate.swift
-//  test
-//
-//  Created by Lukasz Plotnicki on 11/09/14.
-//  Copyright (c) 2014 Thoughtworks. All rights reserved.
-//
-
-
 import Cocoa
 import SpriteKit
 

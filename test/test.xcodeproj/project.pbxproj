@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F86D088419C213440060EAA1 /* BoardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D088319C213440060EAA1 /* BoardTest.swift */; };
 		F8F5D98519C20C100034349A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F5D98419C20C100034349A /* main.swift */; };
 		F8F5D98719C20C100034349A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F5D98619C20C100034349A /* AppDelegate.swift */; };
 		F8F5D98919C20C100034349A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F5D98819C20C100034349A /* GameScene.swift */; };
 		F8F5D98B19C20C100034349A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8F5D98A19C20C100034349A /* GameScene.sks */; };
 		F8F5D98D19C20C100034349A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8F5D98C19C20C100034349A /* Images.xcassets */; };
 		F8F5D99019C20C100034349A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8F5D98E19C20C100034349A /* MainMenu.xib */; };
-		F8F5D99C19C20C100034349A /* testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F5D99B19C20C100034349A /* testTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F86D088319C213440060EAA1 /* BoardTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardTest.swift; sourceTree = "<group>"; };
 		F8F5D97F19C20C100034349A /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F5D98319C20C100034349A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8F5D98419C20C100034349A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -37,7 +38,6 @@
 		F8F5D98F19C20C100034349A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		F8F5D99519C20C100034349A /* testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F5D99A19C20C100034349A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8F5D99B19C20C100034349A /* testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +101,8 @@
 		F8F5D99819C20C100034349A /* testTests */ = {
 			isa = PBXGroup;
 			children = (
-				F8F5D99B19C20C100034349A /* testTests.swift */,
 				F8F5D99919C20C100034349A /* Supporting Files */,
+				F86D088319C213440060EAA1 /* BoardTest.swift */,
 			);
 			path = testTests;
 			sourceTree = "<group>";
@@ -225,7 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8F5D99C19C20C100034349A /* testTests.swift in Sources */,
+				F86D088419C213440060EAA1 /* BoardTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +405,7 @@
 				F8F5D9A119C20C100034349A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8F5D9A219C20C100034349A /* Build configuration list for PBXNativeTarget "testTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +414,7 @@
 				F8F5D9A419C20C100034349A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
