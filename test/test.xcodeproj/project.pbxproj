@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F86D088419C213440060EAA1 /* BoardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D088319C213440060EAA1 /* BoardTest.swift */; };
+		F86D088619C2146E0060EAA1 /* DiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D088519C2146E0060EAA1 /* DiceTest.swift */; };
 		F8F5D98519C20C100034349A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F5D98419C20C100034349A /* main.swift */; };
 		F8F5D98719C20C100034349A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F5D98619C20C100034349A /* AppDelegate.swift */; };
 		F8F5D98919C20C100034349A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F5D98819C20C100034349A /* GameScene.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		F86D088319C213440060EAA1 /* BoardTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardTest.swift; sourceTree = "<group>"; };
+		F86D088519C2146E0060EAA1 /* DiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiceTest.swift; sourceTree = "<group>"; };
 		F8F5D97F19C20C100034349A /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F5D98319C20C100034349A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8F5D98419C20C100034349A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				F8F5D99919C20C100034349A /* Supporting Files */,
 				F86D088319C213440060EAA1 /* BoardTest.swift */,
+				F86D088519C2146E0060EAA1 /* DiceTest.swift */,
 			);
 			path = testTests;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F86D088619C2146E0060EAA1 /* DiceTest.swift in Sources */,
 				F86D088419C213440060EAA1 /* BoardTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
