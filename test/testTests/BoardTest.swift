@@ -8,10 +8,14 @@ class BoardTest: XCTestCase {
         var position = 0
         
         func move(numberOfFields: Int) {
-            if (position + numberOfFields <= size) {
-                position += numberOfFields
-            } else {
+            var newPosition = position + numberOfFields
+            
+            if (newPosition < 0) {
+                position = 0
+            } else if (newPosition > size) {
                 position = size
+            } else {
+                position = newPosition
             }
         }
     }
@@ -35,12 +39,22 @@ class BoardTest: XCTestCase {
     }
     
     func testBoardMoveUntilEnd() {
-        
         let board = Board()
         
         XCTAssertEqual(board.position, 0)
         board.move(26)
         XCTAssertEqual(board.position, 25)
+    }
+    
+    func testBoardMoveToStart() {
+        let board = Board()
+        
+        XCTAssertEqual(board.position, 0)
+        board.move(15)
+        XCTAssertEqual(board.position, 15)
+        board.move(-25)
+        XCTAssertEqual(board.position, 0)
+        
     }
 
     
