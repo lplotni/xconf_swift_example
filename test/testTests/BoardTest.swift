@@ -8,7 +8,11 @@ class BoardTest: XCTestCase {
         var position = 0
         
         func move(numberOfFields: Int) {
-            position += numberOfFields
+            if (position + numberOfFields <= size) {
+                position += numberOfFields
+            } else {
+                position = size
+            }
         }
     }
     
