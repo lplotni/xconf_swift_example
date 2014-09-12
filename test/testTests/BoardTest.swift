@@ -8,7 +8,7 @@ class BoardTest: XCTestCase {
         var position = 0
         
         func move(numberOfFields: Int) {
-            var newPosition = position + numberOfFields
+            let newPosition = position + numberOfFields
             
             if (newPosition < 0) {
                 position = 0
@@ -26,7 +26,6 @@ class BoardTest: XCTestCase {
     }
     
     func testBoardMove() {
-        
         let board = Board()
         
         XCTAssertEqual(board.position, 0)
@@ -54,7 +53,6 @@ class BoardTest: XCTestCase {
         XCTAssertEqual(board.position, 15)
         board.move(-25)
         XCTAssertEqual(board.position, 0)
-        
     }
 
     
