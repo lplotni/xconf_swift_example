@@ -5,21 +5,27 @@ class BoardTest: XCTestCase {
     
     class Board {
         let size = 25
-        let snakes: [(Int,Int)] = [(24, 1), (24, 1), (24, 1), (24, 1)]
+        let snakes: [(Int,Int)] = [(24, 1)]
+        let ladders: [(Int,Int)] = [(3, 16)]
         
         var position = 0
         
-        
         func move(numberOfFields: Int) {
 
-            let newPosition = position + numberOfFields
+            var newPosition: Int? = position + numberOfFields            
             
-            if (newPosition < 0) {
-                position = 0
-            } else if (newPosition > size) {
+            let maybeResetePosition = (snakes + ladders).filter { (head, _) -> Bool in
+                return head == newPosition!
+            }.first?.1
+            
+            if let resetedPosition = maybeResetePosition {
+               newPosition = resetedPosition
+            }
+            
+             if (newPosition > size) {
                 position = size
             } else {
-                position = newPosition
+                position = newPosition!
             }
         }
     }
@@ -50,16 +56,14 @@ class BoardTest: XCTestCase {
         XCTAssertEqual(board.position, 25)
     }
     
-    func testBoardMoveToStart() {
-        XCTAssertEqual(board.position, 0)
-        board.move(15)
-        XCTAssertEqual(board.position, 15)
-        board.move(-25)
-        XCTAssertEqual(board.position, 0)
+    func testBoardMoveToSnakesHead() {
+      board.move(24)
+      XCTAssertEqual(board.position, 1)
     }
     
-    func testBoardHas4Snakes() {
-        XCTAssertEqual(board.snakes.count, 4)
+    func testBoardMoveToLadderStart() {
+        board.move(3)
+        XCTAssertEqual(board.position, 16)
     }
     
     func testAllSnakesHaveProperHeadAndTailEnd() {
@@ -71,5 +75,16 @@ class BoardTest: XCTestCase {
             XCTAssertGreaterThan(tailEnd, 0)
         }
     }
+    
+    func testAllLaddersHaveProperStartAndEnd() {
+        for ladder in board.ladders {
+            let (start, end) = ladder
+            XCTAssertNotEqual(start, end)
+            XCTAssertLessThan(start, end)
+            XCTAssertLessThan(end, 25)
+            XCTAssertGreaterThan(start, 0)
+        }
+    }
+
     
 }
