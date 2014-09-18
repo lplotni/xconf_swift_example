@@ -12,7 +12,7 @@ class BoardTest: XCTestCase {
         
         func move(numberOfFields: Int) {
 
-            var newPosition: Int? = position + numberOfFields            
+            var newPosition: Int? = position + numberOfFields
             
             let maybeResetePosition = (snakes + ladders).filter { (head, _) -> Bool in
                 return head == newPosition!
@@ -46,8 +46,6 @@ class BoardTest: XCTestCase {
         XCTAssertEqual(board.position, 2)
         board.move(3)
         XCTAssertEqual(board.position, 5)
-        board.move(5)
-        XCTAssertEqual(board.position, 10)
     }
     
     func testBoardMoveUntilEnd() {
@@ -85,6 +83,4 @@ class BoardTest: XCTestCase {
             XCTAssertGreaterThan(start, 0)
         }
     }
-
-    
 }
