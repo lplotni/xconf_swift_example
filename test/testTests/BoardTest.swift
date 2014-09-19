@@ -14,15 +14,13 @@ class BoardTest: XCTestCase {
 
             var newPosition: Int? = position + numberOfFields
             
-            let maybeResetePosition = (snakes + ladders).filter { (head, _) -> Bool in
-                return head == newPosition!
-            }.first?.1
+            let maybeResetPosition = (snakes + ladders).filter { $0.0 == newPosition! }.first?.1
             
-            if let resetedPosition = maybeResetePosition {
+            if let resetedPosition = maybeResetPosition {
                newPosition = resetedPosition
             }
             
-             if (newPosition > size) {
+            if (newPosition > size) {
                 position = size
             } else {
                 position = newPosition!
@@ -65,8 +63,7 @@ class BoardTest: XCTestCase {
     }
     
     func testAllSnakesHaveProperHeadAndTailEnd() {
-        for snake in board.snakes {
-            let (head, tailEnd) = snake
+        for (head, tailEnd) in board.snakes {
             XCTAssertNotEqual(head, tailEnd)
             XCTAssertLessThan(tailEnd, head)
             XCTAssertLessThan(head, 25)
@@ -75,8 +72,7 @@ class BoardTest: XCTestCase {
     }
     
     func testAllLaddersHaveProperStartAndEnd() {
-        for ladder in board.ladders {
-            let (start, end) = ladder
+        for (start, end) in board.ladders {
             XCTAssertNotEqual(start, end)
             XCTAssertLessThan(start, end)
             XCTAssertLessThan(end, 25)
